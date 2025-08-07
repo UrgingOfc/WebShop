@@ -1,13 +1,30 @@
-# 🛍️ WebShop Project
+<h1 align="center">🛍️ WebShop Project</h1>
 
-A full-featured eCommerce platform with a public **Frontoffice**, private **Backoffice**, and scalable **Backend API** — built using modern technologies like **Next.js**, **NestJS**, and **React or Angular**.
+<p align="center">
+  <a href="https://github.com/UrgingOfc/WebShop">
+    <img src="https://img.shields.io/github/repo-size/UrgingOfc/WebShop" alt="GitHub repo size"/>
+  </a>
+  <a href="https://github.com/UrgingOfc/WebShop/stargazers">
+    <img src="https://img.shields.io/github/stars/UrgingOfc/WebShop" alt="GitHub stars"/>
+  </a>
+  <a href="https://github.com/UrgingOfc/WebShop/network/members">
+    <img src="https://img.shields.io/github/forks/UrgingOfc/WebShop" alt="GitHub forks"/>
+  </a>
+  <a href="https://github.com/UrgingOfc/WebShop/issues">
+    <img src="https://img.shields.io/github/issues/UrgingOfc/WebShop" alt="GitHub issues"/>
+  </a>
+  <a href="https://github.com/UrgingOfc/WebShop/pulls">
+    <img src="https://img.shields.io/github/issues-pr/UrgingOfc/WebShop" alt="GitHub pull requests"/>
+  </a>
+  <a href="https://github.com/UrgingOfc/WebShop/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/UrgingOfc/WebShop" alt="GitHub license"/>
+  </a>
+</p>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/UrgingOfc/WebShop)
-![GitHub stars](https://img.shields.io/github/stars/UrgingOfc/WebShop)
-![GitHub forks](https://img.shields.io/github/forks/UrgingOfc/WebShop)
-![GitHub issues](https://img.shields.io/github/issues/UrgingOfc/WebShop)
-![GitHub merge requests](https://img.shields.io/github/issues-pr/UrgingOfc/WebShop)
-![GitHub license](https://img.shields.io/github/license/UrgingOfc/WebShop)
+
+<p align="center">
+    A full-featured eCommerce platform with a public <strong>Frontoffice</strong>, private <strong>Backoffice</strong>, and scalable <strong>Backend API</strong> — built using modern technologies like <strong>Next.js</strong>, <strong>NestJS</strong>, and <strong>Angular</strong>.
+</p>
 
 ---
 
@@ -15,7 +32,6 @@ A full-featured eCommerce platform with a public **Frontoffice**, private **Back
 
 ```
 WebShop/
-│
 ├── frontoffice/         # Next.js (client-facing store)
 ├── backoffice/          # Angular (admin dashboard)
 └── backend/             # NestJS

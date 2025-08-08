@@ -18,15 +18,15 @@ backoffice/bun.lockb
 backoffice/logs/
 backoffice/*.log
 
-# API
-api/node_modules/
-api/npm-debug.log*
-api/yarn-debug.log*
-api/yarn-error.log*
-api/pnpm-debug.log*
-api/bun.lockb
-api/logs/
-api/*.log
+# Backend
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+backend/bun.lockb
+backend/logs/
+backend/*.log
 
 # Node.js
 node_modules/

@@ -32,7 +32,7 @@
 
 ```
 WebShop/
-├── api/                 # NestJS
+├── backend/             # NestJS
 ├── frontoffice/         # Next.js (client-facing store)
 └── backoffice/          # Angular (admin dashboard)
 ```

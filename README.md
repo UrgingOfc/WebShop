@@ -32,9 +32,9 @@
 
 ```
 WebShop/
+├── api/                 # NestJS
 ├── frontoffice/         # Next.js (client-facing store)
-├── backoffice/          # Angular (admin dashboard)
-└── backend/             # NestJS
+└── backoffice/          # Angular (admin dashboard)
 ```
 
 ---
@@ -49,12 +49,12 @@ WebShop/
 
 ### Backoffice
 - [Angular V20](https://angular.io/)
-- TailwindCSS
+- [TailwindCSS](https://tailwindcss.com/)
 - Authenticated admin interface
 
-### Backend
+### API
 - [NestJS](https://nestjs.com/)
-- [PostgreSQL](https://www.postgresql.org/)
+- [MariaDB](https://www.mariadb.org//)
 - [Prisma](https://www.prisma.io/)
 - JWT Auth, Guards, Rate Limiting
 

@@ -1,0 +1,22 @@
+{
+  "name": "webshop",
+  "version": "1.0.0",
+  "description": "WebShop Frontoffice for the WebShop project by UrgingOfc",
+  "private": true,
+  "homepage": "https://github.com/UrgingOfc/WebShop#readme",
+  "bugs": {
+    "url": "https://github.com/UrgingOfc/WebShop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrgingOfc/WebShop.git"
+  },
+  "license": "MIT",
+  "author": "UrgingOfc",
+  "scripts": {
+    "start:fo": "cd frontoffice && npm run start:dev",
+    "start:bo": "cd backoffice && npm run start:dev",
+    "start:api": "cd api && npm run start:dev",
+    "start:api:seed": "cd api && npm run seed"
+  }
+}

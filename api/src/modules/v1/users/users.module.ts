@@ -16,12 +16,12 @@
  * Author: UrgingOfc <https://urging.ch>
  */
 
-import {Module} from "@nestjs/common";
-import {PrismaModule} from "./prisma/prisma.module";
-import {AuthModule} from "./modules/v1/auth/auth.module";
-import {UsersModule} from "./modules/v1/users/users.module";
+import { Module } from '@nestjs/common';
+import { UsersService } from './users.service';
+import { UsersController } from './users.controller';
 
 @Module({
-    imports: [PrismaModule, AuthModule, UsersModule]
+  providers: [UsersService],
+  controllers: [UsersController]
 })
-export class AppModule {}
+export class UsersModule {}

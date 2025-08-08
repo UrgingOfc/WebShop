@@ -15,41 +15,41 @@ datasource db {
 
 // Model for the users
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  password  String
-  firstName String
-  lastName  String
-  roleId    Int
-  role      Role     @relation(fields: [roleId], references: [id])
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id              Int      @id @default(autoincrement())
+  email           String   @unique
+  password        String
+  firstName       String
+  lastName        String
+  roleId          Int
+  role            Role     @relation(fields: [roleId], references: [id])
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }
 
 // Model for the roles
 model Role {
-  id             Int              @id @default(autoincrement())
-  name           String           @unique
-  label          String
-  users          User[]
-  RolePermission RolePermission[]
+  id              Int              @id @default(autoincrement())
+  name            String           @unique
+  label           String
+  users           User[]
+  rolePermissions RolePermission[]
 }
 
 // Model for the permissions
 model Permission {
-  id          Int              @id @default(autoincrement())
-  name        String           @unique
-  description String?
-  roles       RolePermission[]
+  id              Int              @id @default(autoincrement())
+  name            String           @unique
+  description     String?
+  roles           RolePermission[]
 }
 
 // Model for the role and permission link
 model RolePermission {
-  id           Int        @id @default(autoincrement())
-  roleId       Int
-  permissionId Int
-  role         Role       @relation(fields: [roleId], references: [id])
-  permission   Permission @relation(fields: [permissionId], references: [id])
+  id              Int        @id @default(autoincrement())
+  roleId          Int
+  permissionId    Int
+  role            Role       @relation(fields: [roleId], references: [id])
+  permission      Permission @relation(fields: [permissionId], references: [id])
 
   @@unique([roleId, permissionId])
 }

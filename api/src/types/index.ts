@@ -16,12 +16,39 @@
  * Author: UrgingOfc <https://urging.ch>
  */
 
-import {Module} from "@nestjs/common";
-import {PrismaModule} from "./prisma/prisma.module";
-import {AuthModule} from "./modules/v1/auth/auth.module";
-import {UsersModule} from "./modules/v1/users/users.module";
+// Interface for User
+export interface User {
+    id: number;
+    email: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+    role: Role;
+    createdAt: Date;
+    updatedAt: Date;
+}
 
-@Module({
-    imports: [PrismaModule, AuthModule, UsersModule]
-})
-export class AppModule {}
+// Interface for UserPayload
+export interface UserPayload {
+    sub: number;
+    email: string;
+    firstName: string;
+    lastName: string;
+    role: string;
+    permissions: string[];
+}
+
+// Interface for Role
+export interface Role {
+    id: number;
+    name: string;
+    label: string;
+    permissions: Permission[]
+}
+
+// Model for Permission
+export interface Permission {
+    id: number;
+    name: string;
+    description?: string
+}

@@ -16,12 +16,22 @@
  * Author: UrgingOfc <https://urging.ch>
  */
 
-import {Module} from "@nestjs/common";
-import {PrismaModule} from "./prisma/prisma.module";
-import {AuthModule} from "./modules/v1/auth/auth.module";
-import {UsersModule} from "./modules/v1/users/users.module";
+import {Body, Controller, Post} from "@nestjs/common";
+import {AuthService} from "./auth.service";
+import {LoginDto} from "./dto/login.dto";
+import {RegisterDto} from "./dto/register.dto";
 
-@Module({
-    imports: [PrismaModule, AuthModule, UsersModule]
-})
-export class AppModule {}
+@Controller("auth")
+export class AuthController {
+    constructor(private readonly authService: AuthService) {}
+
+    @Post("register")
+    async register(@Body() dto: RegisterDto) {
+        return this.authService.register(dto.email, dto.firstName, dto.lastName, dto.password);
+    }
+
+    @Post("login")
+    async login(@Body() dto: LoginDto) {
+        return this.authService.login(dto.email, dto.password);
+    }
+}

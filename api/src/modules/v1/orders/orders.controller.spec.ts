@@ -16,12 +16,21 @@
  * Author: UrgingOfc <https://urging.ch>
  */
 
-import {Module} from "@nestjs/common";
-import {PrismaModule} from "./prisma/prisma.module";
-import {AuthModule} from "./modules/v1/auth/auth.module";
-import {UsersModule} from "./modules/v1/users/users.module";
+import { Test, TestingModule } from '@nestjs/testing';
+import { OrdersController } from './orders.controller';
 
-@Module({
-    imports: [PrismaModule, AuthModule, UsersModule]
-})
-export class AppModule {}
+describe('OrdersController', () => {
+  let controller: OrdersController;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      controllers: [OrdersController],
+    }).compile();
+
+    controller = module.get<OrdersController>(OrdersController);
+  });
+
+  it('should be defined', () => {
+    expect(controller).toBeDefined();
+  });
+});

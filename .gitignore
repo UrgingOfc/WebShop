@@ -1,3 +1,33 @@
+# Frontoffice
+frontoffice/frontend/node_modules/
+frontoffice/frontend/npm-debug.log*
+frontoffice/frontend/yarn-debug.log*
+frontoffice/frontend/yarn-error.log*
+frontoffice/frontend/pnpm-debug.log*
+frontoffice/frontend/bun.lockb
+frontoffice/frontend/logs/
+frontoffice/frontend/*.log
+
+# Backoffice
+backoffice/frontend/node_modules/
+backoffice/frontend/npm-debug.log*
+backoffice/frontend/yarn-debug.log*
+backoffice/frontend/yarn-error.log*
+backoffice/frontend/pnpm-debug.log*
+backoffice/frontend/bun.lockb
+backoffice/frontend/logs/
+backoffice/frontend/*.log
+
+# Backend
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+backend/bun.lockb
+backend/logs/
+backend/*.log
+
 # Node.js
 node_modules/
 npm-debug.log*

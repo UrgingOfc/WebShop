@@ -15,15 +15,15 @@ datasource db {
 
 // Model for the users
 model User {
-  id              Int      @id @default(autoincrement())
-  email           String   @unique
+  id              Int              @id @default(autoincrement())
+  email           String           @unique
   password        String
   firstName       String
   lastName        String
   roleId          Int
-  role            Role     @relation(fields: [roleId], references: [id])
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  role            Role             @relation(fields: [roleId], references: [id])
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
 }
 
 // Model for the roles
@@ -45,11 +45,31 @@ model Permission {
 
 // Model for the role and permission link
 model RolePermission {
-  id              Int        @id @default(autoincrement())
+  id              Int              @id @default(autoincrement())
   roleId          Int
   permissionId    Int
-  role            Role       @relation(fields: [roleId], references: [id])
-  permission      Permission @relation(fields: [permissionId], references: [id])
+  role            Role             @relation(fields: [roleId], references: [id])
+  permission      Permission       @relation(fields: [permissionId], references: [id])
 
   @@unique([roleId, permissionId])
+}
+
+// Model for the translations
+model TranslationKey {
+  id              Int               @id @default(autoincrement())
+  key             String            @unique
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  values          TranslationValue[]
+}
+
+// Model for the translation values
+model TranslationValue {
+  id               Int              @id @default(autoincrement())
+  translationKeyId Int
+  language         String
+  value            String
+  translationKey   TranslationKey   @relation(fields: [translationKeyId], references: [id])
+
+  @@unique([translationKeyId, language])
 }
